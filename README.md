@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/assets/image/Nitro.png" alt="Logo do Projeto Nitro" width="300"/>
+  <img src="/public/images/Nitro.png" alt="Logo do Projeto Nitro" width="300"/>
 </p>
 
 <h1 align="center">📱 Nitro</h1>
