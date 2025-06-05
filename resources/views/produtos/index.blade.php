@@ -148,15 +148,7 @@ function mostrarDetalhesProduto(codigoEAN) {
                         <tr><th>Fabricante</th><td>${produto.fabricante}</td></tr>
                         <tr><th>Ano de Fabricação</th><td>${produto.ano_fabricacao}</td></tr>
                         <tr><th>Vencimento</th><td>${produto.data_vencimento ? new Date(produto.data_vencimento).toLocaleDateString('pt-BR') : ''}</td></tr>
-                        <tr>
-                        <th>Valor</th>
-                        <td>
-                            R$ ${!isNaN(produto.valor) ? Number(produto.valor.toString().replace(',', '.')).toLocaleString('pt-BR', {
-                                minimumFractionDigits: 2,
-                                maximumFractionDigits: 2
-                            }) : 'Não informado'}
-                        </td>
-                        </tr>
+                        <tr><th>Valor</th><td>R$ ${Number(produto.valor).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td></tr>
                         <tr><th>Data de Cadastro</th><td>${produto.data_cadastro ? new Date(produto.data_cadastro).toLocaleString('pt-BR') : ''}</td></tr>
                         </tbody>
                     </table>

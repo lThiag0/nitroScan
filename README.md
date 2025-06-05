@@ -1,7 +1,18 @@
+<p align="center">
+  <img src="/assets/image/Nitro.png" alt="Logo do Projeto Nitro" width="300"/>
+</p>
 
-# 🔥 NitroScan
+<h1 align="center">📱 Nitro</h1>
 
-NitroScan é um sistema de escaneamento de códigos de produtos em tempo real, desenvolvido em **Laravel**. Ele oferece suporte tanto para plataformas **web** quanto **mobile**, utilizando uma API robusta para facilitar a integração e a comunicação entre sistemas.
+<p align="center">
+  NitroScan é um sistema de escaneamento de códigos de produtos em tempo real, desenvolvido em **Laravel**. Ele oferece suporte tanto para plataformas **web** quanto **mobile**, utilizando uma API robusta para facilitar a integração e a comunicação entre sistemas.
+</p>
+
+---
+
+## 📱 NitroScan Mobile
+
+<a href="https://github.com/lThiag0/nitroscan_mobile" alt="NitroScan Mobile app" target="_blank">NitroScan Mobile app</a>
 
 ---
 
@@ -19,10 +30,10 @@ NitroScan é um sistema de escaneamento de códigos de produtos em tempo real, d
 ## 🖼️ Telas do Sistema
 
 ### Cadastro de Produto
-![cadastroproduto](public/images/cadastroproduto.jpeg)
+![cadastroproduto](public/images/cadastraproduto.jpeg)
 
 ### Edição de Produto
-![editarproduto](public/images/editarproduto.jpeg)
+![editarproduto](public/images/editarprodutor.jpeg)
 
 ### Lista de Produtos Escaneados
 ![escaneados](public/images/escaneados.jpeg)
@@ -39,20 +50,11 @@ NitroScan é um sistema de escaneamento de códigos de produtos em tempo real, d
 ### Tela de Login
 ![login](public/images/login.jpeg)
 
-### Scanner em Web/Mobile
-![pcMobileScan](public/images/pcMobileScan.png)
-
-### Versão Mobile do App
-![phone-app](public/images/phone-app.png)
-
 ### Lista de Produtos
 ![produtos](public/images/produtos.jpeg)
 
 ### Ícone do Produto
-![produtosimg](public/images/produtosimg.jpeg)
-
-### Tela de Scanner
-![scanIndex](public/images/scanIndex.jpg)
+![produtosimg](public/images/produtosimg.jpeg
 
 ---
 
