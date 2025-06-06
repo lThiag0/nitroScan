@@ -5,11 +5,6 @@
     <h1>Produtos Escaneados</h1>
 
     {{-- Exibir mensagem --}}
-    @if ($codigosEscaneados->isEmpty())
-        <div class="alert alert-warning alerta-vazio">
-            Nenhum código EAN escaneado encontrado.
-        </div>
-    @endif
 
     @if(session('success'))
         <div class="alert alert-success">
@@ -169,6 +164,10 @@ function mostrarDetalhesProduto(codigoEAN) {
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
+    const isPaginaComPaginacao = window.location.href.includes('page_codigos=');
+    if (isPaginaComPaginacao) {
+        return; // Não atualiza via JS se for uma página com paginação
+    }
     const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
     const lista = document.getElementById('lista-codigos-ean');
     const alertaVazio = document.querySelector('.alerta-vazio');
@@ -205,7 +204,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             </form>
                         </div>
                     `;
-                    lista.appendChild(item);
+                    lista.insertBefore(item, lista.firstChild);
                 });
 
                 // Remove códigos que não estão mais na json
@@ -236,9 +235,10 @@ document.addEventListener('DOMContentLoaded', function () {
             mostrarDetalhesProduto(codigo);
         }
     });
-
+    atualizarLista();
     setInterval(atualizarLista, 5000);
 });
+
 </script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {

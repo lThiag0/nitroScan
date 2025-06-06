@@ -148,9 +148,8 @@ class ProdutoApiController extends Controller
 
         if ($request->hasFile('imagem')) {
             $imagem = $request->file('imagem');
-            $nomeImagem = time() . '.' . $imagem->getClientOriginalExtension();
-            $imagem->move(public_path('produtos'), $nomeImagem);
-            $produto->imagem = $nomeImagem;
+            $path = $imagem->store('produtos', 'public');
+            $produto->imagem = $path;
         }
 
         $produto->save();

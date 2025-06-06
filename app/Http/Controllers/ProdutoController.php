@@ -88,7 +88,8 @@ class ProdutoController extends Controller
     public function limparTodosCodigos()
     {
         EanScan::truncate();
-        return redirect()->back()->with('success', 'Todos os códigos EAN foram removidos com sucesso.');
+        return redirect()->back();
+        //return redirect()->back()->with('success', 'Todos os códigos EAN foram removidos com sucesso.');
     }
 
     public function deletarScan($codigo_ean)

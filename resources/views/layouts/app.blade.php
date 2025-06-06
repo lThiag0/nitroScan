@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>@yield('title', 'NitroScan')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{{ asset('nitroicon.ico') }}" type="image/x-icon" />
 
     <!-- Bootstrap -->
     <link href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
