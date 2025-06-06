@@ -18,17 +18,17 @@
             padding: 0;
             font-family: 'Poppins', sans-serif;
             background: #ffffff;
-            color: #1a237e; 
+            color: #1a237e;
             display: flex;
             flex-direction: column;
         }
 
         body > *:not(footer) {
-            flex-grow: 1;
+            flex: 1;
         }
 
         header {
-            background-color: #2575fc; 
+            background-color: #2575fc;
             color: white;
             padding: 70px 20px;
             text-align: center;
@@ -52,7 +52,7 @@
             border-radius: 20px;
             padding: 50px;
             max-width: 1000px;
-            margin: 60px auto;
+            margin: 40px auto 20px;
             display: flex;
             align-items: center;
             gap: 40px;
@@ -120,14 +120,13 @@
             font-size: 0.95rem;
             color: #444;
             border-top: 1px solid #ddd;
-            flex-shrink: 0;
         }
 
         @media (max-width: 768px) {
             .main-box {
                 flex-direction: column;
                 padding: 40px 20px;
-                margin: 40px 20px;
+                margin: 30px 20px 10px;
             }
 
             .content-left {
@@ -136,7 +135,6 @@
             }
 
             .buttons {
-                display: flex;
                 flex-direction: column;
                 align-items: center;
                 width: 100%;
@@ -179,7 +177,13 @@
     </div>
 
     <footer>
-        &copy; {{ date('Y') }} NitroScan. Todos os direitos reservados.
+        <div class="container">
+            <p class="mb-1">Desenvolvido por:</p>
+            <p><strong>Thiago Araujo</strong> &middot; <strong>Gabriel Lopes</strong></p>
+            <div class="border-top pt-3 mt-3">
+                &copy; {{ date('Y') }} NitroScan. Todos os direitos reservados.
+            </div>
+        </div>
     </footer>
 </body>
 </html>

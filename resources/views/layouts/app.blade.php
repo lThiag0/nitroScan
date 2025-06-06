@@ -15,16 +15,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
-        body {
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
             font-family: 'Poppins', sans-serif;
             background-color: #f7f9fc;
-            margin: 0;
-            padding-bottom: 60px;
         }
 
-        .navbar-brand {
-            font-weight: bold;
-            color: #2575fc;
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1;
+            padding-bottom: 20px;
         }
 
         footer {
@@ -33,10 +40,11 @@
             padding: 20px 0;
             font-size: 0.9rem;
             border-top: 1px solid #ccc;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            color: #2575fc !important;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -115,8 +123,23 @@
     </div>
 
     <!-- Footer -->
-    <footer>
-        &copy; {{ date('Y') }} NitroScan. Todos os direitos reservados.
+    <footer class="bg-light text-muted text-center py-4 border-top mt-5">
+        <div class="container">
+            <h5 class="text-dark">NitroScan</h5>
+            <p class="mb-3">
+                Plataforma inteligente para leitura e gestão de produtos via código EAN.<br>
+                Simplificando sua operação com tecnologia.
+            </p>
+
+            <p class="mb-1">Desenvolvido por:</p>
+            <p>
+                <strong>Thiago Araujo</strong> &middot; <strong>Gabriel Lopes</strong>
+            </p>
+
+            <div class="border-top pt-3 mt-3">
+                &copy; {{ date('Y') }} NitroScan. Todos os direitos reservados.
+            </div>
+        </div>
     </footer>
 
     <!-- JS (opcional) -->
