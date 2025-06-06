@@ -75,7 +75,7 @@
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/nitroscan.git
+   git clone https://github.com/lThiag0/nitroscan.git
    cd nitroscan
    ```
 
@@ -95,9 +95,28 @@
    php artisan migrate
    ```
 
-5. Inicie o servidor:
+5. Inicie o servidor por ip do pc para funciona as Api:
    ```bash
-   php artisan serve
+   php artisan serve --host=0.0.0.0 --port=8000
+   ```
+
+6. Para Funciona tudo direito verifique que o seu php.ini esta assim:
+   ```bash
+   file_uploads = On
+   upload_max_filesize = 10M
+   post_max_size = 12M
+   extension = gd
+   ```
+
+7. Login para funcionario:
+   ```bash
+   faça o comando seeder para funcionario e criar link de produtos:
+   php artisan db:seed
+   php artisan storage:link
+
+   email: thiago@hotmail.com
+   senha: 123456
+   senha para db: $2y$12$6gPT.F7OKOHNKzvjcdaYPO0obgSDBraImcTfv/DzBCH2A4sdbVCtC
    ```
 
 ---
