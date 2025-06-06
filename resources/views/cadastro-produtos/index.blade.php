@@ -13,6 +13,12 @@
             <a href="{{ route('cadastro-produtos.create') }}" class="btn btn-primary w-100 w-md-auto">Cadastrar Novo Produto</a>
         </div>
 
+        <div class="col-md-auto mb-2 mb-md-0">
+            <a href="{{ route('cadastro-produtos.index') }}" class="btn btn-secondary">
+                <i class="fa-solid fa-rotate-right"></i> Recarregar
+            </a>
+        </div>
+
         <div class="col">
             <form action="{{ route('cadastro-produtos.search') }}" method="GET" class="d-flex gap-2 flex-column flex-md-row">
                 <input type="text" name="query" class="form-control" placeholder="Buscar por EAN ou nome" value="{{ request('query') }}">

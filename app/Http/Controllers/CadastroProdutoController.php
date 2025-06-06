@@ -18,7 +18,8 @@ class CadastroProdutoController extends Controller
             $query->where('fabricante', $fabricante);
         }
 
-        $cadastroProdutos = $query->orderBy('nome')->paginate(10);
+        //$cadastroProdutos = $query->orderBy('nome')->paginate(10);
+        $cadastroProdutos = $query->orderBy('data_cadastro', 'desc')->paginate(10)->withQueryString();
 
         $fabricantes = Produto::select('fabricante')->distinct()->pluck('fabricante');
 
@@ -56,7 +57,10 @@ class CadastroProdutoController extends Controller
         $data['data_cadastro'] = now();
 
         if ($request->hasFile('imagem')) {
-            $path = $request->file('imagem')->store('cadastro-produtos', 'public');
+            //$path = $request->file('imagem')->store('cadastro-produtos', 'public');
+            //$data['imagem'] = $path;
+
+            $path = $request->file('imagem')->store('produtos', 'public');
             $data['imagem'] = $path;
         }
 
